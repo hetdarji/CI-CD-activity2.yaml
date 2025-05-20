@@ -1,0 +1,27 @@
+name: Variable Override Activity2
+
+# Workflow-level variable
+env:
+  VAR_LEVEL: "Workflow Level"
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  job1:
+    name: Variable Override Test
+    runs-on: ubuntu-latest
+
+    # Job-level override
+    env:
+      VAR_LEVEL: "Job Level"
+
+    steps:
+      - name: Show overridden VAR_LEVEL at Job Level
+        run: echo "VAR_LEVEL is: $VAR_LEVEL"
+
+      - name: Step-level override
+        env:
+          VAR_LEVEL: "Step Level"
+        run: echo "VAR_LEVEL overridden in Step: $VAR_LEVEL"
