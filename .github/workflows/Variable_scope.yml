@@ -1,4 +1,4 @@
-name: Variable Scope Demo
+name: Activitytwo_Ci/cd_variable_scope
 
 # Define workflow-level variable
 env:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   demo-job:
-    name: Demo Variable Scopes
+    name: Example Variable Scopes
 
     # Define job-level variable
     env:
